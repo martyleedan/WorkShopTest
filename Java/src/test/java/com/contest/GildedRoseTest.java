@@ -7,8 +7,8 @@ import static org.junit.Assert.assertEquals;
 public class GildedRoseTest {
 
     @Test
-    public void should_fix_me() {
-        Item[] items = new Item[] { new Item("normal", 10, 20) };
+    public void should_quality_19_9_fix_me() {
+        Item[] items = new Item[] { new Item("normal", 9, 19) };
         GildedRose gildedRose = new GildedRose(items);
         
         gildedRose.updateQuality();
