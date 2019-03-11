@@ -16,4 +16,14 @@ public class GildedRoseTest {
         assertEquals(9, (gildedRose.items[0]).sellIn);
         assertEquals(19, gildedRose.items[0].quality);
     }
+    @Test
+    public void should_quality_0_fu6_fix_me() {
+        Item[] items = new Item[] { new Item("normal", -6, 0) };
+        GildedRose gildedRose = new GildedRose(items);
+        
+        gildedRose.updateQuality();
+
+        assertEquals(-6, (gildedRose.items[0]).sellIn);
+        assertEquals(0, gildedRose.items[0].quality);
+    }
 }
