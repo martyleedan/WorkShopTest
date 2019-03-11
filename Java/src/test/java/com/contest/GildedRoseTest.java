@@ -66,4 +66,14 @@ public class GildedRoseTest {
         assertEquals(-5, gildedRose.items[0].sellIn);
         assertEquals(0, gildedRose.items[0].quality);
     }
+    @Test
+    public void should_quality_8_if_sellin_fu6() {
+        Item[] items = new Item[] { new Item("normal", -6, 0) };
+        GildedRose gildedRose = new GildedRose(items);
+        
+        gildedRose.updateQuality();
+
+        assertEquals(-6, gildedRose.items[0].sellIn);
+        assertEquals(0, gildedRose.items[0].quality);
+    }
 }
