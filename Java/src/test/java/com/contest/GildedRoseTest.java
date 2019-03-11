@@ -36,4 +36,14 @@ public class GildedRoseTest {
         assertEquals(40, (gildedRose.items[0]).sellIn);
         assertEquals(50, gildedRose.items[0].quality);
     }
+    @Test
+    public void should_quality_50_45_fix_me() {
+        Item[] items = new Item[] { new Item("normal", 45, 50) };
+        GildedRose gildedRose = new GildedRose(items);
+        
+        gildedRose.updateQuality();
+
+        assertEquals(45, (gildedRose.items[0]).sellIn);
+        assertEquals(50, gildedRose.items[0].quality);
+    }
 }
