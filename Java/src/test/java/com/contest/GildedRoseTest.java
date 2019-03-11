@@ -33,8 +33,8 @@ public class GildedRoseTest {
         
         gildedRose.updateQuality();
 
-        assertEquals(9, (gildedRose.items[0]).sellIn);
-        assertEquals(19, gildedRose.items[0].quality);
+        assertEquals(8, gildedRose.items[0].sellIn);
+        assertEquals(18, gildedRose.items[0].quality);
     }
     @Test
     public void should_quality_10_if_sellin_0() {
@@ -43,7 +43,7 @@ public class GildedRoseTest {
         
         gildedRose.updateQuality();
 
-        assertEquals(9, (gildedRose.items[0]).sellIn);
-        assertEquals(19, gildedRose.items[0].quality);
+        assertEquals(0, gildedRose.items[0].sellIn);
+        assertEquals(10, gildedRose.items[0].quality);
     }
 }
