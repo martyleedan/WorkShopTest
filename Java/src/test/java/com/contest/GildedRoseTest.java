@@ -46,4 +46,24 @@ public class GildedRoseTest {
         assertEquals(0, gildedRose.items[0].sellIn);
         assertEquals(10, gildedRose.items[0].quality);
     }
+    @Test
+    public void should_quality_8_if_sellin_fu1() {
+        Item[] items = new Item[] { new Item("normal", -1, 8) };
+        GildedRose gildedRose = new GildedRose(items);
+        
+        gildedRose.updateQuality();
+
+        assertEquals(-1, gildedRose.items[0].sellIn);
+        assertEquals(8, gildedRose.items[0].quality);
+    }
+    @Test
+    public void should_quality_8_if_sellin_fu5() {
+        Item[] items = new Item[] { new Item("normal", -5, 0) };
+        GildedRose gildedRose = new GildedRose(items);
+        
+        gildedRose.updateQuality();
+
+        assertEquals(-5, gildedRose.items[0].sellIn);
+        assertEquals(0, gildedRose.items[0].quality);
+    }
 }
